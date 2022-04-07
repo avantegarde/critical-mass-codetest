@@ -25,7 +25,6 @@ async function getNavItems() {
 async function renderNavItems() {
   let items = await getNavItems();
   let locations = items.cities;
-  console.log(locations)
   let html = '<ul>';
   locations.forEach(location => {
     let htmlSegment = `
