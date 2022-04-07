@@ -36,3 +36,74 @@ body {
   background: #dedede;
   color: #000000;
 }
+/*---------------*/
+/*----- Nav -----*/
+/*---------------*/
+#nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+#nav li {
+  padding: 0 30px;
+  margin: 0 0 15px 0;
+  border-bottom: 2px solid #dedede;
+}
+#nav li:first-child {
+  padding-left: 80px;
+}
+#nav li:last-child {
+  padding-right: 80px;
+}
+
+#nav li > a {
+  display: block;
+  font-size: 16px;
+  line-height: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #929292;
+  text-decoration: none;
+  padding: 10px 0;
+}
+
+#nav li > a:hover {
+  color: #2d6ea6
+}
+
+#nav li.active > a {
+  color: #000000;
+}
+
+#nav-target {
+  position: absolute;
+  border-bottom: 2px solid #000000;
+  z-index: 2;
+  transform: translateX(-60px);
+}
+
+#nav a,
+#nav-target {
+  transition: all .35s ease-in-out;
+}
+@media screen and (max-width: 1080px) {
+  #nav li:first-child {
+    padding-left: 30px;
+  }
+  #nav li:last-child {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 980px) {
+  #nav li {
+    flex-grow: 1;
+    text-align: center;
+  }
+  #nav li > a {
+    display: inline-block;
+  }
+}
